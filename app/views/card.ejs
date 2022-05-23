@@ -1,0 +1,25 @@
+<%- include('header') %>
+
+<h1>Details de la carte :</h1>
+
+<div class="cardsContainer">
+    <div class="card">  
+      <a href="#">
+        <img style="min-width: 200px" src="/visuals/<%=cardDetail.visual_name%>" alt="<%=cardDetail.name%> illustration">
+        <p class="cardName"><%=cardDetail.name%></p>
+      </a>
+      <a class="link--addCard" title="Ajouter au deck" href="/deck/add/<%= cardDetail.id %>">[ + ]</a>
+    </div>
+    <div class="card__details">
+    <h1 class="card-title"><%=cardDetail.name%></h1>
+      <p class="card-text">Element : <%=cardDetail.element%> </p>
+      <p class="card-text">Niveau : <%=cardDetail.level%> </p>
+      <p class="card-text">Nord : <%=cardDetail.value_north%></p>
+      <p class="card-text">Est : <%=cardDetail.value_east%></p>
+      <p class="card-text">Sud : <%=cardDetail.value_south%></p>
+      <p class="card-text">Ouest : <%=cardDetail.value_west%></p>
+  </div>
+</div>
+
+
+<%- include('footer') %>
